@@ -1,0 +1,30 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "acm:DescribeCertificate",
+        "acm:ListCertificates",
+        "acm:GetCertificate",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:CreateSecurityGroup",
+        "ec2:DeleteSecurityGroup",
+        "ec2:Describe*",
+        "elasticloadbalancing:*",
+        "iam:ListServerCertificates",
+        "iam:GetServerCertificate",
+        "cognito-idp:DescribeUserPoolClient",
+        "waf-regional:GetWebACLForResource",
+        "waf-regional:GetWebACL",
+        "waf-regional:AssociateWebACL",
+        "waf-regional:DisassociateWebACL",
+        "tag:GetResources",
+        "tag:TagResources",
+        "waf:GetWebACL"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
