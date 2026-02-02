@@ -7,6 +7,9 @@ output "eks_node_role_arn" {
 }
 
 output "alb_ingress_role_arn" {
-  value       = try(aws_iam_role.alb_ingress_role[0].arn, null)
-  description = "IRSA role for ALB Ingress Controller"
+  value = length(aws_iam_role.alb_ingress_role) > 0 ? aws_iam_role.alb_ingress_role[0].arn : null
+}
+
+output "cloudwatch_role_arn" {
+  value = aws_iam_role.cloudwatch_role.arn
 }
