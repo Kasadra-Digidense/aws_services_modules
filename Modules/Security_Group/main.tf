@@ -33,7 +33,7 @@ module "alb_sg" {
 
 # App Security Group (ALB → App)
 
-module "app_sg-new" {
+module "app_sg" {
   source = "./modules/security-group"
 
   name        = "app-sg"
@@ -62,4 +62,5 @@ module "app_sg-new" {
     }
   ]
 }
+
 
