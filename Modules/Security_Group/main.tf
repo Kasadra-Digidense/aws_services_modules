@@ -3,7 +3,7 @@
 module "alb_sg" {
   source = "./modules/security-group"
 
-  name        = "alb-sg"
+  name        = "alb-sg-new"
   description = "ALB security group"
   vpc_id      = var.vpc_id
 
@@ -33,7 +33,7 @@ module "alb_sg" {
 
 # App Security Group (ALB → App)
 
-module "app_sg" {
+module "app_sg-new" {
   source = "./modules/security-group"
 
   name        = "app-sg"
@@ -62,3 +62,4 @@ module "app_sg" {
     }
   ]
 }
+
