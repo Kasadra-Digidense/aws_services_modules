@@ -14,12 +14,6 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      # 🔍 Debug step (remove later if you want)
-      - name: Verify directory structure
-        run: |
-          pwd
-          ls -R
-
       - name: Set up Terraform
         uses: hashicorp/setup-terraform@v3
         with:
@@ -34,16 +28,16 @@ jobs:
 
       - name: Terraform Init
         run: terraform init
-        working-directory: DEV/EKS_Cluster_deployment
+        working-directory: Dev/EKS_Cluster_deployment
 
       - name: Terraform Validate
         run: terraform validate
-        working-directory: DEV/EKS_Cluster_deployment
+        working-directory: Dev/EKS_Cluster_deployment
 
       - name: Terraform Plan
         run: terraform plan -out=tfplan
-        working-directory: DEV/EKS_Cluster_deployment
+        working-directory: Dev/EKS_Cluster_deployment
 
       - name: Terraform Apply
         run: terraform apply -auto-approve tfplan
-        working-directory: DEV/EKS_Cluster_deployment
+        working-directory: Dev/EKS_Cluster_deployment
