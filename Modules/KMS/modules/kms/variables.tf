@@ -19,7 +19,7 @@ variable "enable_key_rotation" {
 variable "aliases_name" {
   type        = string
   description = "this is for kms key name creation"
-  default     = "alias/Flash_stream_keys"
+  default     = "alias/Flash_stream_keys_tf"
 }
 
 variable "role_name" {
@@ -50,4 +50,5 @@ variable "Policy_attachment" {
   type        = string
   description = "The description for the KMS key policy access attachment"
   default     = "KMS_Access_Attachment"
+
 }
