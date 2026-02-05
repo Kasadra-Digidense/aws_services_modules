@@ -53,12 +53,3 @@ variable "nat_gateway_tag" {
   }
 }
 
-###########################################################
-# Security Group
-###########################################################
-
-variable "sg_port_pub" {
-  description = "Port traffic enable"
-  type        = list(number)
-  default     = [22, 80, 443, 5432]
-}
